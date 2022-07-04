@@ -1,9 +1,14 @@
 import Router from 'next/router';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { ReactNode, useContext, useEffect, useState } from 'react'
 import { JournalContextProvider } from '../context/journal.context';
 import { UserContext } from '../context/user.context'
 
-export default function AuthGuard({ required = true, children }) {
+interface Props {
+  required: boolean,
+  children: ReactNode
+}
+
+export default function AuthGuard({ required = true, children } : Props) {
   const [loading, setLoading] = useState(true);
   const auth = useContext(UserContext);
 
