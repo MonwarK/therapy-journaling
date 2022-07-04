@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { useContext, useState } from 'react';
 import AuthGuard from '../../components/auth-guard.component';
 import Button from '../../components/button.component';
@@ -9,6 +10,10 @@ export default function Index() {
 
   return (
     <AuthGuard>
+      <Head>
+        <title>Journal Entries | Stress Reliever</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className='p-5 max-w-screen-xl mx-auto'>
         {/* Add New Entry */}
         <div className='flex justify-end mb-10'>

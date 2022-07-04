@@ -1,4 +1,5 @@
 import { doc, getDoc, Timestamp } from 'firebase/firestore'
+import Head from 'next/head'
 import Link from 'next/link'
 import Router from 'next/router'
 import React, { useContext, useEffect, useState } from 'react'
@@ -22,6 +23,10 @@ export default function JournalId({ stringifiedJournal } : Props) {
   
   return (
     <div className='p-5 max-w-xl mx-auto'>
+      <Head>
+        <title>Journal Entry - {journal?.title} | Stress Reliever</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className='bg-white p-5 shadow-lg space-y-5'>
         <h1 className='text-2xl uppercase font-medium text-center'>{journal.title}</h1>
         <div>

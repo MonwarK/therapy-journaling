@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Lottie from "lottie-react";
 import psychotherapyAnimation from "../animations/psychotherapy.json"
 import { CheckCircleIcon, EmojiHappyIcon, GiftIcon } from "@heroicons/react/outline"
@@ -9,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Welcome to Stress Reliever | Stress Reliever</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

@@ -1,4 +1,5 @@
 import { LockClosedIcon } from '@heroicons/react/solid';
+import Head from 'next/head';
 import { ChangeEvent, useContext, useState } from 'react';
 import AuthGuard from '../../components/auth-guard.component';
 import { UserContext } from '../../context/user.context';
@@ -20,6 +21,10 @@ export default function Register() {
 
   return (
     <AuthGuard required={false}>
+      <Head>
+        <title>Register | Stress Reliever</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
