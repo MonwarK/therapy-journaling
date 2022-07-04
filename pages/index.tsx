@@ -1,84 +1,60 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Lottie from "lottie-react";
+import psychotherapyAnimation from "../animations/psychotherapy.json"
+import { CheckCircleIcon, EmojiHappyIcon, GiftIcon } from "@heroicons/react/outline"
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      <main>
+        {/* Feature */}
+        <div className='bg-[#f3f4f5]'>
+          <div className='h-[50vh] grid grid-cols-2 items-center p-5 uppercase max-w-screen-xl mx-auto'> 
+            <div>
+              <h1 className='text-4xl font-black text-gray-600'>Welcome to the <span className='text-indigo-500'>stress relieving</span> journaling app.</h1>
+            </div>
+            <div>
+              <Lottie 
+                animationData={psychotherapyAnimation} 
+                loop={true} 
+              />
+            </div>
+          </div>
+        </div>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
+        {/* Features */}
+        <div>
+          <div className='max-w-screen-xl mx-auto p-5 my-10'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center'> 
+              <div className='bg-white cursor-pointer p-3 rounded-lg shadow-md duration-100 hover:scale-110 active:text-indigo-500 group'>
+                <EmojiHappyIcon className='h-10 mb-3 mx-auto text-gray-600 group-active:text-indigo-500' />
+                <p>Easy to understand.</p>
+              </div>
+              <div className='bg-white cursor-pointer p-3 rounded-lg shadow-md duration-100 hover:scale-110 active:text-indigo-500 group'>
+                <GiftIcon className='h-10 mb-3 mx-auto text-gray-600 group-active:text-indigo-500' />
+                <p>Free and easily accessible at all times.</p>
+              </div>
+              <div className='sm:col-span-2 md:col-span-1 bg-white cursor-pointer p-3 rounded-lg shadow-md duration-100 hover:scale-110 active:text-indigo-500 group'>
+                <CheckCircleIcon className='h-10 mb-3 mx-auto text-gray-600 group-active:text-indigo-500' />
+                <p>Helps use proven techinques to improve mindset.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className='max-w-screen-xl mx-auto p-5 my-10 space-y-8 text-lg'>
+          <h2 className='text-3xl uppercase'>Why use our service?</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et malesuada fames ac turpis egestas integer eget aliquet. Orci nulla pellentesque dignissim enim sit amet venenatis urna. Interdum varius sit amet mattis vulputate enim nulla. In tellus integer feugiat scelerisque varius morbi enim nunc faucibus. Tempor commodo ullamcorper a lacus. Diam ut venenatis tellus in. At erat pellentesque adipiscing commodo elit at imperdiet dui. Dolor sit amet consectetur adipiscing. Molestie a iaculis at erat pellentesque adipiscing commodo.</p>
+          <p>Viverra mauris in aliquam sem fringilla ut. Enim tortor at auctor urna nunc id. Mattis vulputate enim nulla aliquet porttitor lacus. Ornare suspendisse sed nisi lacus sed viverra tellus. Habitant morbi tristique senectus et netus et malesuada. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Nisl tincidunt eget nullam non nisi est. Id velit ut tortor pretium. Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat. Dignissim convallis aenean et tortor at risus viverra adipiscing. In pellentesque massa placerat duis ultricies. Enim nunc faucibus a pellentesque sit. Volutpat est velit egestas dui id.</p>
         </div>
       </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
     </div>
   )
 }
