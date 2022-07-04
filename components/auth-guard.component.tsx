@@ -5,7 +5,7 @@ import { UserContext } from '../context/user.context'
 
 interface Props {
   required: boolean,
-  children: ReactNode
+  children: ReactNode | Element[]
 }
 
 export default function AuthGuard({ required = true, children } : Props) {
