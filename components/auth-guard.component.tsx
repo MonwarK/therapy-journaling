@@ -4,8 +4,8 @@ import { JournalContextProvider } from '../context/journal.context';
 import { UserContext } from '../context/user.context'
 
 interface Props {
-  required: boolean,
-  children: ReactNode | Element[]
+  required?: boolean,
+  children: ReactNode
 }
 
 export default function AuthGuard({ required = true, children } : Props) {
