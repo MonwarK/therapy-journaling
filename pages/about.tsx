@@ -1,9 +1,13 @@
+import Head from 'next/head'
 import React from 'react'
 import AuthGuard from '../components/auth-guard.component'
 
 export default function about() {
   return (
     <AuthGuard>
+      <Head>
+        <title>About | Stress Reliever</title>
+      </Head>
       <div className='max-w-screen-xl mx-auto p-5 space-y-5'>
         <div>
           <h1 className='text-3xl font-bold'>About</h1>

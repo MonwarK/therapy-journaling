@@ -13,7 +13,7 @@ export default function Header() {
   const auth = useContext(UserContext);
 
   return (
-    <Popover className="relative bg-white z-40">
+    <Popover className="relative bg-white shadow-md z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -42,9 +42,11 @@ export default function Header() {
                     My Journal
                   </div>
                 </Link>
-                <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Sentimental score
-                </a>
+                <Link href="/sentimentscore">
+                  <div className="text-base cursor-pointer font-medium text-gray-500 hover:text-gray-900">
+                    Sentimental score
+                  </div>
+                </Link>
                 <Link href="/about">
                   <div className="text-base cursor-pointer font-medium text-gray-500 hover:text-gray-900">
                     About 3 Column Technique
@@ -117,7 +119,7 @@ export default function Header() {
                       </div>
                     </Link>
 
-                    <Link href="#">
+                    <Link href="/sentimentscore">
                       <div className="text-base cursor-pointer font-medium text-gray-900 hover:text-gray-700 hover:underline">
                         Sentimental score
                       </div>
